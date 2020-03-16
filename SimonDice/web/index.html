@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+   
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="keyboard">
+      <div class="row">
+        <div class="key" data-key="81" id="q">q</div>
+        <div class="key" data-key="87" id="w">w</div>
+        <div class="key" data-key="69" id="e">e</div>
+        <div class="key" data-key="82" id="r">r</div>
+        <div class="key" data-key="84" id="t">t</div>
+        <div class="key" data-key="89" id="y">y</div>
+        <div class="key" data-key="85" id="u">u</div>
+        <div class="key" data-key="73" id="i">i</div>
+        <div class="key" data-key="79" id="o">o</div>
+        <div class="key" data-key="80" id="p">p</div>
+      </div>
+      <div class="row">
+        <div class="key" data-key="65" id="a">a</div>
+        <div class="key" data-key="83" id="s">s</div>
+        <div class="key" data-key="68" id="d">d</div>
+        <div class="key" data-key="70" id="f">f</div>
+        <div class="key" data-key="71" id="g">g</div>
+        <div class="key" data-key="72" id="h">h</div>
+        <div class="key" data-key="74" id="j">j</div>
+        <div class="key" data-key="75" id="k">k</div>
+        <div class="key" data-key="76" id="l">l</div>
+      </div>
+      <div class="row last">
+        <div class="key" data-key="90" id="z">z</div>
+        <div class="key" data-key="88" id="x">x</div>
+        <div class="key" data-key="67" id="c">c</div>
+        <div class="key" data-key="86" id="v">v</div>
+        <div class="key" data-key="66" id="b">b</div>
+        <div class="key" data-key="78" id="n">n</div>
+        <div class="key" data-key="77" id="m">m</div>
+      </div>
+    </div>
+    <div>
+        <input type="text" size="50" onkeypress="myFunction2(event)">
+    </div>
+    <script type="text/javascript">
+      window.ondblclick = myFuntion;
+      function myFuntion() {
+        if(document.getElementById("q")) {
+          document.getElementById("q").style.color = "red";
+        } else if(document.getElementById("m")) {
+          document.getElementById("m").style.color = "blue";
+        }  
+      }
+      function myFunction2(event) {
+          var x = event.key;
+          if((x >= "a" && x <= "z") || (x >= "A" && x <= "Z")) {
+              document.getElementById(x).style.color = "blue";
+              setTimeout(function(){document.getElementById(x).style.color = "white"}, 2000);
+          }
+      }
+    </script>
+  </body>
+</html>
